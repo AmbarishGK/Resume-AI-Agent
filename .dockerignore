@@ -1,0 +1,14 @@
+.git
+__pycache__/
+*.pdf
+*.tex
+*.log
+node_modules/
+.venv/
+.env
+.DS_Store
+.vscode/
+.idea/
+*.pyc
+*.egg-info/
+.ipynb_checkpoints/ 
