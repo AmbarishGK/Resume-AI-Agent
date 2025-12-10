@@ -1,0 +1,75 @@
+https://jobs.ashbyhq.com/zip/bec203f9-7919-479a-b021-c7871b7757e2
+Software Engineer, New Grad (2026 Start)
+Location
+San Francisco
+
+Employment Type
+Full time
+
+Location Type
+Hybrid
+
+Department
+Engineering
+
+Overview
+Application
+
+27%
+Resume Match
+4 of 15 keywords
+Simplify
+Simplify
+V1
+V2
+The simple task of buying software, services, or tools at work has become hopelessly complicated at even the most innovative companies in the world. Today, enterprises spend $120T+ per year globally (>30 times larger than annual consumer e-commerce spend) and rely on vendors more than ever before to run their businesses.
+
+Our cofounders started Zip in 2020 to address this seemingly intractable problem with a purpose-built procurement platform that provides a simple, consumer-grade user experience. Within the last 4 years, Zip has created a new category and developed the leading solution in this $50B+ TAM space. Today, the world’s leading companies like OpenAI, Snowflake, Anthropic, Coinbase, and Prudential rely on Zip to manage billions of dollars in spend.
+
+We have a world-class team coming from category-defining companies like Airbnb, Meta, Stripe, Salesforce, Apple, and Google. With a $2.2 billion valuation and $370 million in funding from Y Combinator, Tiger Global, BOND, DST Global, and CRV, we’re focused on developing cutting-edge technology, expanding into new global markets, and—above all–driving incredible value for our customers. Join us!
+
+Your Role
+As a Software Engineer you will be responsible for building Zip’s core products and architecture. You will ship features that will be immediately used by our customers, and will work with a tight-knit team that values open communication and cross-functional collaboration. We move quickly to solve a wide range of complex technical and product challenges. While we are an experienced team that can provide constant guidance and mentorship, we value engineers who can scope and solve difficult technical challenges.
+
+You Will
+Design and build highly reliable and resilient products and features
+
+Work closely with cross functional product and customer-facing teams to understand requirements and ship thoughtful solutions
+
+Write high-quality, extensible, and maintainable code
+
+Design and build scalable frontend applications and components
+
+Design and build APIs to drive existing and new features for a web-based application
+
+Qualifications
+Pursuing a BS or MS in Computer Science or related technical field involving coding (e.g. physics or math), with a graduation date between December 2025 - June 2026
+
+Experience with web applications and API development. At Zip, our stack includes Python, Javascript/TypeScript, React, and GraphQL
+
+Ability and interest to quickly learn new frameworks, architecture patterns, and programming languages as needed
+
+Fantastic written and verbal communication skills
+
+Prior internships in high-growth startup environment
+
+The salary range for this role is $140,000 - $145,000. The salary for this position is determined based on a variety of job-related factors that may include location, relevant experience, education, or particular skills and expertise.
+
+Perks & Benefits
+At Zip, we’re committed to providing our employees with everything they need to do their best work.
+
+📈 Start-up equity
+
+🦷 Full health, vision & dental coverage
+
+🍽️ Catered breakfasts, lunches & dinners for SF employees
+
+🚍 Commuter benefit
+
+🚠 Team building events & happy hours
+
+🌴 Flexible PTO
+
+💻 Apple equipment plus home office budget
+
+💸 401k plan

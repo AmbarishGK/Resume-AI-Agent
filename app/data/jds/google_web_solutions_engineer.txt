@@ -1,0 +1,43 @@
+Web Solutions Engineer, Data Solutions and Tools
+corporate_fare
+Google
+place
+New York, NY, USA
+; Mountain View, CA, USA
+; +2 more
+info_outline
+XInfo This role may also be located in our Playa Vista, CA campus. Applicants in the County of Los Angeles: Qualified applications with arrest or conviction records will be considered for employment in accordance with the Los Angeles County Fair Chance Ordinance for Employers and the California Fair Chance Act. Applicants in San Francisco: Qualified applications with arrest or conviction records will be considered for employment in accordance with the San Francisco Fair Chance Ordinance for Employers and the California Fair Chance Act. Note: By applying to this position you will have an opportunity to share your preferred working location from the following: New York, NY, USA; Mountain View, CA, USA; Los Angeles, CA, USA; San Francisco, CA, USA.
+This role may also be located in our Playa Vista, CA campus.
+
+Applicants in the County of Los Angeles: Qualified applications with arrest or conviction records will be considered for employment in accordance with the Los Angeles County Fair Chance Ordinance for Employers and the California Fair Chance Act.
+
+Applicants in San Francisco: Qualified applications with arrest or conviction records will be considered for employment in accordance with the San Francisco Fair Chance Ordinance for Employers and the California Fair Chance Act.
+
+Note: By applying to this position you will have an opportunity to share your preferred working location from the following: New York, NY, USA; Mountain View, CA, USA; Los Angeles, CA, USA; San Francisco, CA, USA.
+
+Minimum qualifications:
+Bachelor’s degree in Engineering, Computer Science, a related field, or equivalent practical experience in software development.
+2 years of experience in full-stack software development.
+Experience with backend languages (e.g., Java, Python, or C++).
+Experience with front-end languages (e.g., AngularJS, JavaScript or TypeScript).
+Experience working with database technologies (e.g., SQL, NoSQL).
+
+Preferred qualifications:
+Master’s degree in Computer Science, Engineering, or a related field.
+2 years of experience designing and optimizing distributed applications.
+2 years of experience working with client-side web technologies (e.g., HTML, CSS, JavaScript, or HTTP).
+2 years of experience collaborating with both technical and non-technical stakeholders on project requirements.
+Experience with unit testing, agile software development, and bug and change management systems.
+Experience designing and building maintainable Application Programming Interfaces (API), especially using Protocol Buffers.
+About the job
+As a part of the Web Solutions Engineering team, you will develop innovative, scalable software solutions for business problems, working collaboratively across Google to build tools and systems that drive efficiency and impact. In this role, you will solve defined engineering problems using standard tools and resources in a team setting, contributing to rapid development of stable solutions while testing new ideas frequently with a focus on velocity, scale, efficiency, and an AI-first approach future-proof innovation and growth.The Global Partnerships organization is responsible for exploring new opportunities with Google's partners. Google’s Global Partnerships team works with a wide range of partners to bring the best of Google to power their business. The Global Partnerships team supports Google’s own Product teams with essential partnerships to help Google’s user experiences in advertising, Search, Assistant, Maps, Travel, Shopping, Payments and more. Teams create product-enabling partnerships, go-to-market strategies and incubate business growth for a variety of products.
+
+The US base salary range for this full-time position is $102,000-$146,000 + bonus + equity + benefits. Our salary ranges are determined by role, level, and location. Within the range, individual pay is determined by work location and additional factors, including job-related skills, experience, and relevant education or training. Your recruiter can share more about the specific salary range for your preferred location during the hiring process.
+
+Please note that the compensation details listed in US role postings reflect the base salary only, and do not include bonus, equity, or benefits. Learn more about benefits at Google.
+Responsibilities
+Execute complete tasks within the scope of a larger project, under the guidance of your manager or executive engineers.
+Develop modern web application back-ends and REST APIs.
+Build new user-facing features, create reusable code and libraries, and optimize applications for speed and scalability.
+Apply standard tools and processes to solve defined technical problems and identify and implement optimizations and improvements in codebases and processes.
+Collaborate with the product team to provide realistic estimates for project delivery and help identify solution gaps.

@@ -1,0 +1,96 @@
+skill,aliases,category
+Python,"py,python3",Language
+C++,"cpp,c plus plus",Language
+C,"c lang",Language
+Java,"java se,jdk",Language
+JavaScript,"js,typescript,nodejs",Language
+TypeScript,"ts",Language
+SQL,"postgresql,mysql,sqlite",Language
+NoSQL,"mongodb,cassandra,dynamodb",Database
+Bash,"shell scripting",Language
+Go,"golang",Language
+Rust,"rustlang",Language
+MATLAB,"matlab script",Language
+HTML,"html5",Web
+CSS,"css3",Web
+React,"reactjs,react.js",Framework
+Next.js,"nextjs",Framework
+Vue,"vuejs,vue.js",Framework
+Angular,"angularjs",Framework
+Django,"django rest",Framework
+Flask,"flask api",Framework
+FastAPI,"fast api",Framework
+Node.js,"node,nodejs,express",Framework
+Express,"expressjs,express",Framework
+Spring,"springboot,spring boot",Framework
+Kotlin,"android kotlin",Language
+Swift,"ios swift",Language
+PyTorch,"torch,pytorch-lightning",Framework
+TensorFlow,"tf,tensorflow lite",Framework
+Keras,"keras api",Framework
+Scikit-learn,"sklearn,scikit",Framework
+XGBoost,"xgb,gradient boosting",Framework
+OpenCV,"opencv-python,cv2",Library
+Transformers,"huggingface transformers,llm",Library
+LangChain,"langchain,lch",Library
+LLM,"large language model,gpt",Concept
+Deep Learning,"cnn,rnn,mlp,neural network",Concept
+Machine Learning,"ml,supervised learning,unsupervised learning",Concept
+Data Engineering,"data pipeline,data wrangling,etl",Domain
+ETL,"extract transform load",Process
+Airflow,"apache airflow",Tool
+Spark,"pyspark,apache spark",Tool
+Kafka,"apache kafka,streaming",Tool
+Docker,"containers,docker-compose",Tool
+Kubernetes,"k8s,kubernetes",Tool
+Linux,"ubuntu,debian,unix",Platform
+Git,"version control,gitlab,github",Tool
+CI/CD,"jenkins,github actions,gitlab ci",Process
+AWS,"s3,ec2,lambda,iam",Cloud
+GCP,"google cloud,vertex ai,bigquery",Cloud
+Azure,"microsoft azure,azure devops",Cloud
+ROS,"ros1,robot operating system",Framework
+ROS2,"ros humble,ros foxy",Framework
+SLAM,"simultaneous localization and mapping",Robotics
+LIDAR,"lidar sensor,velodyne",Robotics
+Camera Calibration,"stereo calibration,opencv calibration",Robotics
+CMake,"build system,cmake",Tool
+Embedded Systems,"microcontrollers,embedded",Domain
+Firmware,"baremetal,firmware dev",Domain
+FPGA,"verilog,vhdl",Hardware
+I2C,"spi,uart,can bus",Hardware
+Microcontrollers,"stm32,arduino,esp32",Hardware
+Control Systems,"pid,control theory",Robotics
+Reinforcement Learning,"rl,policy gradient",AI
+Computer Vision,"object detection,segmentation,cv",AI
+NLP,"natural language processing,text mining",AI
+Data Visualization,"matplotlib,seaborn,powerbi,tableau",Tool
+Backend Development,"api,restful,backend systems",Domain
+Frontend Development,"ui,ux,frontend",Domain
+Full Stack Development,"frontend backend,web fullstack",Domain
+APIs,"rest,graphql,grpc",Tool
+PostgreSQL,"postgres",Database
+MySQL,"mysqlserver",Database
+MongoDB,"mongodb,mongo",Database
+Redis,"redis cache",Database
+Elasticsearch,"elastic search",Database
+JIRA,"jira software,agile",Tool
+Agile,"scrum,sprint",Process
+System Design,"scalability,distributed systems",Concept
+Networking,"tcp/ip,http,udp",Concept
+Security,"encryption,authentication",Concept
+Testing,"unit test,pytest,jest",Process
+Data Science,"pandas,numpy,statistics",Domain
+Statistics,"probability,statistical modeling",Concept
+Big Data,"hadoop,hdfs",Tool
+MLOps,"model deployment,mlflow",Domain
+DevOps,"ci cd,automation",Domain
+Edge AI,"embedded ai,on-device ai",Domain
+Autonomous Systems,"autonomy,robot planning",Domain
+Robotics Perception,"sensor fusion,slam,vision",Domain
+Simulation,"gazebo,isaac sim,unity",Tool
+Control,"pid,trajectory planning",Robotics
+Realtime Systems,"rtos,latency",Concept
+API Integration,"rest api,backend integration",Process
+Database Design,"schema design,relational db",Process
+Software Architecture,"design patterns,microservices",Concept

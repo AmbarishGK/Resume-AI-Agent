@@ -6,24 +6,20 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "11500:11434"        # change if 11434 is free and you prefer 1:1
+      - "11500:11434"
     environment:
       OLLAMA_MODELS: "mistral:instruct mistral:7b-instruct-q4_K_M phi3:mini"
     volumes:
-      - ~/.ollama:/root/.ollama   # or use: ollama_models:/root/.ollama
+      - ~/.ollama:/root/.ollama
       - ./:/app
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - capabilities: [gpu]
+    # ✅ Explicit GPU request (works with your NVIDIA toolkit)
+    gpus: all
     healthcheck:
       test: ["CMD", "curl", "-fsS", "http://localhost:11434/api/tags"]
       interval: 30s
       timeout: 5s
       start_period: 20s
       retries: 5
-    command: ["/bin/bash"]
+    # ✅ Keep the container alive
+    command: ["bash", "-lc", "sleep infinity"]
 
-volumes:
-  ollama_models:

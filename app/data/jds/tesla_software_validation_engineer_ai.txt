@@ -1,0 +1,71 @@
+Software Validation Engineer, AI Platforms
+Job Category	AI & Robotics
+Location	Palo Alto, California
+Req. ID	255342
+Job Type	Full-time
+
+43%
+Resume Match
+6 of 14 keywords
+Simplify
+Simplify
+V1
+V2
+What to Expect
+The Autopilot Firmware Platforms team builds foundational systems that enable engineers to develop, validate, iterate, and deliver Tesla’s cutting-edge AI platform. As a part of this team, you will create highly capable test frameworks, scalable infrastructure, and backend services that empower teams to test, analyze, and continuously improve Autopilot firmware with minimal constraints. 
+
+In this role, you will design scalable test platforms with novel testing capabilities that are required for new Tesla products and features. You will architect and implement systems that automate test scheduling and execution, visualize and extract insights from complex data, and drive continuous improvement across products and infrastructure. You will deliver robust, modular, and intuitive software that accelerates development cycles, improves efficiency, and ensures Tesla’s products remain at the forefront of the industry. In a fast-paced environment where innovation happens at scale, your contributions will directly shape the reliability, performance, and quality of Tesla’s Autopilot systems. 
+
+What You’ll Do
+Design, implement, and maintain software frameworks to support Hardware-in-the-Loop (HIL) and simulation-based testing for Autopilot firmware and software
+
+Develop and manage infrastructure-as-code solutions to automate CI/CD workflows for the Firmware Platforms team
+
+Build scalable systems to aggregate, visualize, and analyze large volumes of test data across diverse test variants 
+
+Collaborate closely with engineering teams to ensure tools simplify workflows, improve productivity, and enhance platform capabilities 
+
+Integrate LLM-based tooling to accelerate test failure analysis
+
+Deliver clean, maintainable, and modular code that accelerates development and supports rapid deployment of automated testing systems
+
+What You’ll Bring
+Strong foundation in software engineering principles and advanced proficiency in Python, including object-oriented design, multi-threading, and scripting 
+
+Demonstrated ownership of HIL and/or SIL testing frameworks 
+
+Hands-on experience with containerization technologies such as Docker or Singularity and CI/CD tools like Jenkins, TeamCity, or Artifactory 
+
+Comfortable working in Linux/Unix environments and proficient in Bash or other scripting languages 
+
+Demonstrated ability to work independently and deliver high-quality, scalable software solutions
+
+Compensation and Benefits
+Benefits
+Along with competitive pay, as a full-time Tesla employee, you are eligible for the following benefits at day 1 of hire:
+
+Aetna PPO and HSA plans > 2 medical plan options with $0 payroll deduction
+Family-building, fertility, adoption and surrogacy benefits
+Dental (including orthodontic coverage) and vision plans, both have options with a $0 paycheck contribution
+Company Paid (Health Savings Account) HSA Contribution when enrolled in the High Deductible Aetna medical plan with HSA
+Healthcare and Dependent Care Flexible Spending Accounts (FSA)
+401(k) with employer match, Employee Stock Purchase Plans, and other financial benefits
+Company paid Basic Life, AD&D, short-term and long-term disability insurance
+Employee Assistance Program
+Sick and Vacation time (Flex time for salary positions), and Paid Holidays
+Back-up childcare and parenting support resources
+Voluntary benefits to include: critical illness, hospital indemnity, accident insurance, theft & legal services, and pet insurance
+Weight Loss and Tobacco Cessation Programs
+Tesla Babies program
+Commuter benefits
+Employee discounts and perks program
+
+Expected Compensation
+$132,000 - $390,000/annual salary + cash and stock awards + benefits
+Pay offered may vary depending on multiple individualized factors, including market location, job-related knowledge, skills, and experience. The total compensation package for this position may also include other elements dependent on the position offered. Details of participation in these benefit plans will be provided if an employee receives an offer of employment.
+
+Tesla is an Equal Opportunity employer. All qualified applicants will receive consideration for employment without regard to any factor, including veteran status and disability status, protected by applicable federal, state or local laws.
+
+Tesla is also committed to working with and providing reasonable accommodations to individuals with disabilities. Please let your recruiter know if you need an accommodation at any point during the interview process.
+
+

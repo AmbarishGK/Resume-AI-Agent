@@ -1,0 +1,42 @@
+Back to jobs
+Software Engineer, Full Stack
+San Francisco, CA • New York, NY • United States
+
+33%
+Resume Match
+5 of 15 keywords
+Simplify
+Simplify
+V1
+V2
+Figma is growing our team of passionate creatives and builders on a mission to make design accessible to all. Figma’s platform helps teams bring ideas to life—whether you're brainstorming, creating a prototype, translating designs into code, or iterating with AI. From idea to product, Figma empowers teams to streamline workflows, move faster, and work together in real time from anywhere in the world. If you're excited to shape the future of design and collaboration, join us!
+
+As a Full Stack Engineer, you’ll have the opportunity to build both the products and the platforms that empower millions of users—from startups to Fortune 500 companies—to create and collaborate in real time. Whether you’re designing core features, improving developer workflows, scaling enterprise infrastructure, or launching entirely new products, your work will directly shape the future of how teams bring ideas to life. You’ll take on complex technical challenges across the stack, building intuitive user experiences, optimizing performance in real-time collaborative systems, and designing secure, reliable, and scalable systems to support Figma’s rapid growth and global expansion.
+ 
+Our engineers are highly cross-functional, partnering closely with Product, Design, Research, and Data to deliver best-in-class experiences. If you’re excited to work across the stack, push the boundaries of product development, and help scale the systems that power Figma, we’d love for you to join us.
+ 
+This opportunity applies to openings at varying seniority levels across our teams, including but not limited to Figma Editor, FigJam, Figma Slides, Figma Sites, Figma Buzz, Growth & Monetization, Internal Tools, and our cross-product Foundations team. We’ll discuss more specifics about open roles during the interview process.
+ 
+This is a full-time role that can be held from one of our US hubs or remotely in the United States.
+ 
+What you’ll do at Figma:
+Design, build, and ship high-quality features across the stack, from polished front-end experiences to scalable back-end systems
+Contribute to both new product development and improvements to established products, balancing user experience craft with performance and architecture quality
+Own projects end-to-end — ideation, technical design, implementation, testing, launch, and iteration
+Collaborate with cross-functional partners in Product, Design, Research, and Data to shape product direction and strategy
+Operate, monitor, and continuously improve the systems you build, with a strong focus on reliability, security, and scalability
+Mentor teammates, contribute to team culture, and share knowledge through code reviews, design critiques, and pairing
+We’d love to hear from you if you have:
+Proven experience in shipping and maintaining full-stack applications in production
+Strong proficiency in modern front-end frameworks (e.g., React/TypeScript) and back-end technologies (e.g., Ruby, Python, Go, C++, PostgreSQL)
+A product mindset, with the ability to translate user needs into scalable technical solutions
+Excellent collaboration and communication skills, with experience working effectively across cross-functional teams
+Passion for engineering craft and building polished, maintainable, and scalable systems
+While not required, it’s an added plus if you also have:
+Experience leading large-scale projects or launching 0→1 products
+Familiarity with C++ and WebAssembly in user-facing applications
+Background in areas such as growth engineering, developer tooling, billing and payments infrastructure, or extensibility platforms (plugins, APIs, widgets)
+Exposure to technologies like Stripe, Salesforce, Snowflake, SCIM, SAML, or experimentation and observability tooling
+A passion for mentoring peers and helping shape engineering culture
+At Figma, one of our values is Grow as you go. We believe in hiring smart, curious people who are excited to learn and develop their skills. If you’re excited about this role but your past experience doesn’t align perfectly with the points outlined in the job description, we encourage you to apply anyways. You may be just the right candidate for this or other roles.
+

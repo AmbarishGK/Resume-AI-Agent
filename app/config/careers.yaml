@@ -1,0 +1,42 @@
+sites:
+  - name: "Stripe"
+    type: "dom"
+    url: "https://stripe.com/jobs/search"
+    list_selector: "tbody.JobsListings__tableBody tr.TableRow"
+    title_selector: "a.JobsListings__link"
+    link_selector: "a.JobsListings__link"
+    location_selector: "span.JobsListings__locationDisplayName"
+    date_selector: ""
+    date_mode: "relative"
+    pagination:
+      type: "scroll"
+      scroll_steps: 6
+      scroll_wait_ms: 800
+
+  - name: "Databricks"
+    type: "dom"
+    url: "https://www.databricks.com/company/careers/open-positions"
+    list_selector: "a[href*='/company/careers/'][href*='-']"
+    title_selector: "&self"
+    link_selector: "&self"
+    location_selector: ""
+    date_selector: ""
+    date_mode: "relative"
+    pagination:
+      type: "scroll"
+      scroll_steps: 8
+      scroll_wait_ms: 1000
+
+  - name: "Notion"
+    type: "dom"
+    url: "https://www.notion.so/careers"
+    list_selector: "li.openPositions_jobsListItem__0mSS9"
+    title_selector: "div.jobPosting_jobTitle__AbyvH"
+    link_selector: "a.jobPosting_jobLink__VOc2Y"
+    location_selector: "div.jobPosting_jobLocation__Q1A3S"
+    date_selector: ""
+    date_mode: "relative"
+    pagination:
+      type: "scroll"
+      scroll_steps: 6
+      scroll_wait_ms: 800

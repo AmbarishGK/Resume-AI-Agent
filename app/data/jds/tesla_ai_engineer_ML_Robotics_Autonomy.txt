@@ -1,0 +1,67 @@
+AI Engineer, ML Inference Optimization, Autonomy & Robotics
+Job Category	AI & Robotics
+Location	Palo Alto, California
+Req. ID	255357
+Job Type	Full-time
+
+40%
+Resume Match
+4 of 10 keywords
+Simplify
+Simplify
+V1
+V2
+What to Expect
+Tesla’s AI team is pushing the frontier of real-world machine learning, building models that reason, predict, and act with human-level physical intelligence. We train and deploy large-scale ML systems powering products from Autopilot to Optimus.
+
+As part of the Model Optimization group, you will work at the intersection of machine learning and systems, designing our most advanced models to run efficiently across Tesla’s diverse compute stack,  from data centers to edge AI accelerators. You will design the model architecture and engineer algorithmic optimizations that make large-scale model inference fast, reliable, and hardware-aware.
+
+What You’ll Do
+Design, train, and deploy  large neural networks that run efficiently on heterogeneous hardware (GPU, CPU, Tesla’s in-house AI ASIC)
+Develop and integrate quantization, sparsity, pruning, and distillation techniques to improve inference performance
+Design inference algorithms that improve inference performance in terms of quantization and latency
+Profile and improve latency, throughput, and memory efficiency for large ML models across edge and cloud environments
+Collaborate with compiler and hardware engineers to co-design architectures for efficient real-time inference
+Design and implement custom GPU kernels (CUDA / OpenCL) to accelerate model operations and post-processing pipelines
+Conduct systematic benchmarking, scaling, and validation of inference performance across Tesla platforms
+What You’ll Bring
+Proven experience in scaling and optimizing inference for large ML models, particularly transformers or similar architectures
+Familiarity with quantization-aware training, model compression, and distillation for edge and real-time inference
+Proficiency with Python and C++ (modern standards 14/17/20) and deep learning frameworks such as PyTorch, TensorFlow, or JAX
+Strong understanding of computer systems and architecture, with experience deploying ML models on GPUs, TPUs, or NPUs
+Hands-on expertise with CUDA programming, low-level performance profiling, and compiler-level optimization (TensorRT, TVM, XLA)
+Experience collaborating with compiler/hardware engineers to bridge model and system-level optimization
+Excellent problem-solving skills and the ability to debug and tune high-performance inference workloads
+Compensation and Benefits
+Benefits
+Along with competitive pay, as a full-time Tesla employee, you are eligible for the following benefits at day 1 of hire:
+
+Aetna PPO and HSA plans > 2 medical plan options with $0 payroll deduction
+Family-building, fertility, adoption and surrogacy benefits
+Dental (including orthodontic coverage) and vision plans, both have options with a $0 paycheck contribution
+Company Paid (Health Savings Account) HSA Contribution when enrolled in the High Deductible Aetna medical plan with HSA
+Healthcare and Dependent Care Flexible Spending Accounts (FSA)
+401(k) with employer match, Employee Stock Purchase Plans, and other financial benefits
+Company paid Basic Life, AD&D, short-term and long-term disability insurance
+Employee Assistance Program
+Sick and Vacation time (Flex time for salary positions), and Paid Holidays
+Back-up childcare and parenting support resources
+Voluntary benefits to include: critical illness, hospital indemnity, accident insurance, theft & legal services, and pet insurance
+Weight Loss and Tobacco Cessation Programs
+Tesla Babies program
+Commuter benefits
+Employee discounts and perks program
+
+Expected Compensation
+$124,000 - $420,000/annual salary + cash and stock awards + benefits
+Pay offered may vary depending on multiple individualized factors, including market location, job-related knowledge, skills, and experience. The total compensation package for this position may also include other elements dependent on the position offered. Details of participation in these benefit plans will be provided if an employee receives an offer of employment.
+
+Tesla is an Equal Opportunity employer. All qualified applicants will receive consideration for employment without regard to any factor, including veteran status and disability status, protected by applicable federal, state or local laws.
+
+Tesla is also committed to working with and providing reasonable accommodations to individuals with disabilities. Please let your recruiter know if you need an accommodation at any point during the interview process.
+
+For quick access to screen reading technology compatible with this site click here to download a free compatible screen reader (free step by step tutorial can be found here). Please contact ADA@tesla.com for additional information or to request accommodations.
+
+Privacy is a top priority for Tesla. We build it into our products and view it as an essential part of our business. To understand more about the data we collect and process as part of your application, please view our Tesla Talent Privacy Notice .
+
+

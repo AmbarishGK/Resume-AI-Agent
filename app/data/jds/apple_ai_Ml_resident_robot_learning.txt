@@ -1,0 +1,44 @@
+AIML Resident - Robot Learning
+Santa Clara, California, United States
+Machine Learning and AI
+
+
+Submit Resume
+
+33%
+Resume Match
+2 of 6 keywords
+Simplify
+Simplify
+V1
+V2
+Summary
+Posted:
+Nov 06, 2025
+Role Number:
+200630834-3760
+Imagine what you could do here! At Apple, great ideas have a way of becoming great products, services, and customer experiences very quickly. Combining groundbreaking machine learning research with next-generation hardware, our teams take user experiences to the next level.
+Description
+Apple’s AIML Residency is a year-long program inviting experts in various fields to apply their own domain expertise to innovate and build revolutionary machine learning and AI-based products and experiences. As AI-based solutions spread across fields, the need for domain experts to understand machine learning and apply their expertise in ML settings grows. 
+
+Residents will have the opportunity to attend ML and AI courses, learn from an Apple mentor closely involved in their program, collaborate with fellow residents, gain hands-on experience working on high-impact projects, publish in premier academic conferences, and partner with Apple teams across hardware, software, and services.
+
+We are a growing team with a unique track record blending high-impact academic research and cross-functional collaborations. We are looking for a highly motivated Resident to pursue ambitious research that will result in a publication at a top-tier robotics conference or journal. Our ideal candidate will also be motivated to routinely engage with our partner teams in order to best align their research with areas of strategic importance to Apple.
+Minimum Qualifications
+Proficiency in a programming language such as Python, Objective-C, C++, Swift, and/or R. Candidates should have experience completing a moderate-sized software project
+Demonstrated ability to connect and collaborate with others
+Graduate degree in a STEM field or equivalent industry experience in software engineering
+Apple’s AIML residency is a one-year program starting in July 2026. Residents must be available to work full-time (40 hours/week) July 13, 2026 - July 9, 2027. Additionally, applicants who are currently enrolled in a degree program must graduate before this program commences on July 13, 2026
+Preferred Qualifications
+Ideal candidates will also have academic, research, or industry experience in one of the following: Robotics, Machine Learning & ML Research, or Large Language Models / Generative AI. Thesis, capstone project, internship, co-op, and/or proven experience in these fields qualifies
+We encourage you to submit a cover letter as part of your application explaining: What are your research interests? How do they apply to the specific Residency position you applied to? Why would you would like to join the AIML residency program broadly?
+APPLICATION DEADLINE: DECEMBER 15, 2025
+Pay & Benefits
+At Apple, base pay is one part of our total compensation package and is determined within a range. This provides the opportunity to progress as you grow and develop within a role. The base pay range for this role is between $147,400 and $220,900, and your base pay will depend on your skills, qualifications, experience, and location.
+
+Apple employees also have the opportunity to become an Apple shareholder through participation in Apple’s discretionary employee stock programs. Apple employees are eligible for discretionary restricted stock unit awards, and can purchase Apple stock at a discount if voluntarily participating in Apple’s Employee Stock Purchase Plan. You’ll also receive benefits including: Comprehensive medical and dental coverage, retirement benefits, a range of discounted products and free services, and for formal education related to advancing your career at Apple, reimbursement for certain educational expenses — including tuition. Additionally, this role might be eligible for discretionary bonuses or commission payments as well as relocation. Learn more about Apple Benefits.
+
+Note: Apple benefit, compensation and employee stock programs are subject to eligibility requirements and other terms of the applicable plan or program.
+Apple is an equal opportunity employer that is committed to inclusion and diversity. We seek to promote equal opportunity for all applicants without regard to race, color, religion, sex, sexual orientation, gender identity, national origin, disability, Veteran status, or other legally protected characteristics. Learn more about your EEO rights as an applicant.
+
+Apple accepts applications to this posting on an ongoing basis.

@@ -1,0 +1,494 @@
+name,link,working,status_code,response,mode
+Apple Careers,https://jobs.apple.com/en-us/search,yes,200,OK,httpx
+Google Careers,https://careers.google.com/,yes,200,OK,httpx
+Amazon Jobs,https://www.amazon.jobs/,yes,200,OK,httpx
+Microsoft Careers,https://careers.microsoft.com/,yes,200,OK,httpx
+Meta Careers,https://www.metacareers.com/,no,400,Bad Request,httpx
+Netflix Jobs,https://jobs.netflix.com/,yes,200,OK,httpx
+X (Twitter) Careers,https://careers.x.com/,yes,200,OK,httpx
+Uber Careers,https://www.uber.com/careers/,yes,200,OK,httpx
+Airbnb Careers,https://careers.airbnb.com/,yes,200,OK,httpx
+Salesforce Careers,https://careers.salesforce.com/,no,403,AttributeError: 'Page' object has no attribute 'response',browser
+Cisco Jobs,https://jobs.cisco.com/,yes,200,OK,httpx
+Intel Careers,https://intel.wd1.myworkdayjobs.com/External/,yes,200,OK,httpx
+Oracle Careers,https://careers.oracle.com/,yes,200,OK,httpx
+Tesla Careers,https://www.tesla.com/careers,no,403,AttributeError: 'Page' object has no attribute 'response',browser
+NVIDIA Careers,https://careers.nvidia.com/,yes,200,OK,httpx
+AMD Careers,https://careers.amd.com/,yes,200,OK,httpx
+Qualcomm Careers,https://careers.qualcomm.com/,yes,200,OK,httpx
+Adobe Careers,https://careers.adobe.com/,yes,200,OK,httpx
+VMware Careers,https://careers.vmware.com/,no,,"TimeoutError: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to ""https://careers.vmware.com/"", waiting until ""domcontentloaded""
+",browser
+Broadcom Careers,https://careers.broadcom.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.broadcom.com/
+Call log:
+  - navigating to ""https://careers.broadcom.com/"", waiting until ""domcontentloaded""
+",browser
+JPMorgan Chase Careers,https://careers.jpmorgan.com/,yes,200,OK,httpx
+Goldman Sachs Careers,https://www.goldmansachs.com/careers/,yes,200,OK,httpx
+Morgan Stanley Careers,https://careers.morganstanley.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.morganstanley.com/
+Call log:
+  - navigating to ""https://careers.morganstanley.com/"", waiting until ""domcontentloaded""
+",browser
+Bank of America Careers,https://careers.bankofamerica.com/,yes,200,OK,httpx
+Wells Fargo Careers,https://careers.wellsfargo.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.wellsfargo.com/
+Call log:
+  - navigating to ""https://careers.wellsfargo.com/"", waiting until ""domcontentloaded""
+",browser
+Citigroup Careers,https://careers.citi.com/,no,,"Error: Page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://careers.citi.com/
+Call log:
+  - navigating to ""https://careers.citi.com/"", waiting until ""domcontentloaded""
+",browser
+American Express Careers,https://careers.americanexpress.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.americanexpress.com/
+Call log:
+  - navigating to ""https://careers.americanexpress.com/"", waiting until ""domcontentloaded""
+",browser
+Visa Careers,https://careers.visa.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.visa.com/
+Call log:
+  - navigating to ""https://careers.visa.com/"", waiting until ""domcontentloaded""
+",browser
+Mastercard Careers,https://careers.mastercard.us/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.mastercard.us/
+Call log:
+  - navigating to ""https://careers.mastercard.us/"", waiting until ""domcontentloaded""
+",browser
+PayPal Careers,https://careers.paypal.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.paypal.com/
+Call log:
+  - navigating to ""https://careers.paypal.com/"", waiting until ""domcontentloaded""
+",browser
+Stripe Jobs,https://stripe.com/jobs,yes,200,OK,httpx
+Square Careers,https://careers.squareup.com/,yes,200,OK,httpx
+Robinhood Careers,https://careers.robinhood.com/,yes,200,OK,httpx
+Coinbase Careers,https://www.coinbase.com/careers,yes,200,Forbidden,browser
+Plaid Careers,https://plaid.com/careers/,yes,200,OK,httpx
+Capital One Careers,https://careers.capitalone.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.capitalone.com/
+Call log:
+  - navigating to ""https://careers.capitalone.com/"", waiting until ""domcontentloaded""
+",browser
+Fidelity Careers,https://jobs.fidelity.com/,yes,200,Forbidden,browser
+Charles Schwab Careers,https://careers.schwab.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.schwab.com/
+Call log:
+  - navigating to ""https://careers.schwab.com/"", waiting until ""domcontentloaded""
+",browser
+BlackRock Careers,https://careers.blackrock.com/,yes,200,OK,httpx
+Intuit Careers,https://careers.intuit.com/,yes,200,Too Many Requests,browser
+Credit Karma Careers,https://careers.creditkarma.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.creditkarma.com/
+Call log:
+  - navigating to ""https://careers.creditkarma.com/"", waiting until ""domcontentloaded""
+",browser
+SoFi Careers,https://www.sofi.com/careers/,yes,200,OK,httpx
+Affirm Careers,https://careers.affirm.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.affirm.com/
+Call log:
+  - navigating to ""https://careers.affirm.com/"", waiting until ""domcontentloaded""
+",browser
+Kraken Careers,https://jobs.kraken.com/,yes,200,Forbidden,browser
+Gemini Careers,https://www.gemini.com/careers,yes,200,OK,httpx
+Shopify Careers,https://www.shopify.com/careers,yes,200,OK,httpx
+eBay Careers,https://careers.ebayinc.com/,yes,200,OK,httpx
+Etsy Careers,https://careers.etsy.com/,yes,200,OK,httpx
+Wayfair Careers,https://careers.wayfair.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.wayfair.com/
+Call log:
+  - navigating to ""https://careers.wayfair.com/"", waiting until ""domcontentloaded""
+",browser
+Walmart Careers,https://careers.walmart.com/,yes,200,OK,httpx
+Target Careers,https://corporate.target.com/careers/,yes,200,OK,httpx
+Home Depot Careers,https://careers.homedepot.com/,yes,200,OK,httpx
+Lowe's Careers,https://careers.lowes.com/,no,,"Error: Page.goto: net::ERR_CONNECTION_RESET at https://careers.lowes.com/
+Call log:
+  - navigating to ""https://careers.lowes.com/"", waiting until ""domcontentloaded""
+",browser
+Best Buy Careers,https://jobs.bestbuy.com/,yes,200,OK,httpx
+Costco Careers,https://jobs.costco.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://jobs.costco.com/
+Call log:
+  - navigating to ""https://jobs.costco.com/"", waiting until ""domcontentloaded""
+",browser
+Nike Careers,https://jobs.nike.com/,yes,200,OK,httpx
+BigCommerce Careers,https://careers.bigcommerce.com/,yes,200,OK,httpx
+Squarespace Careers,https://www.squarespace.com/careers/,yes,200,OK,httpx
+Wix Careers,https://www.wix.com/jobs/,yes,200,OK,httpx
+GoDaddy Careers,https://careers.godaddy.com/,yes,200,OK,httpx
+Poshmark Careers,https://careers.poshmark.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.poshmark.com/
+Call log:
+  - navigating to ""https://careers.poshmark.com/"", waiting until ""domcontentloaded""
+",browser
+Mercari Careers,https://careers.mercari.com/,yes,200,OK,httpx
+ThredUp Careers,https://careers.thredup.com/,yes,200,OK,httpx
+Reverb Careers,https://careers.reverb.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.reverb.com/
+Call log:
+  - navigating to ""https://careers.reverb.com/"", waiting until ""domcontentloaded""
+",browser
+Overstock Careers,https://careers.overstock.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.overstock.com/
+Call log:
+  - navigating to ""https://careers.overstock.com/"", waiting until ""domcontentloaded""
+",browser
+QVC Careers,https://careers.qvc.com/,no,,"TimeoutError: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to ""https://careers.qvc.com/"", waiting until ""domcontentloaded""
+",browser
+HSN Careers,https://careers.hsn.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.hsn.com/
+Call log:
+  - navigating to ""https://careers.hsn.com/"", waiting until ""domcontentloaded""
+",browser
+REI Careers,https://rei.jobs/,yes,200,OK,httpx
+Starbucks Careers,https://careers.starbucks.com/,yes,200,OK,httpx
+Bluehost Careers,https://www.bluehost.com/careers,yes,200,Forbidden,browser
+HostGator Careers,https://www.hostgator.com/careers,yes,200,Forbidden,browser
+Namecheap Careers,https://www.namecheap.com/careers/,yes,200,Forbidden,browser
+WooCommerce Careers,https://woocommerce.com/careers/,yes,200,OK,httpx
+Magento Careers,https://magento.com/careers,no,,"Error: Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://magento.com/careers
+Call log:
+  - navigating to ""https://magento.com/careers"", waiting until ""domcontentloaded""
+",browser
+Webflow Careers,https://webflow.com/careers,yes,200,OK,httpx
+LinkedIn Careers,https://careers.linkedin.com/,yes,200,OK,httpx
+Spotify Careers,https://www.lifeatspotify.com/jobs,yes,200,OK,httpx
+Zoom Careers,https://careers.zoom.us/,yes,200,OK,httpx
+Slack Careers,https://slack.com/careers,yes,200,OK,httpx
+Asana Careers,https://asana.com/jobs,yes,200,OK,httpx
+Dropbox Careers,https://jobs.dropbox.com/,yes,200,OK,httpx
+Box Careers,https://www.box.com/careers,yes,200,Forbidden,browser
+Notion Careers,https://www.notion.so/careers,yes,200,OK,httpx
+Figma Careers,https://www.figma.com/careers/,yes,200,OK,httpx
+Canva Careers,https://www.canva.com/careers/,yes,200,Forbidden,browser
+Miro Careers,https://miro.com/careers/,yes,200,OK,httpx
+Airtable Careers,https://careers.airtable.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.airtable.com/
+Call log:
+  - navigating to ""https://careers.airtable.com/"", waiting until ""domcontentloaded""
+",browser
+Monday.com Careers,https://monday.com/careers/,yes,200,OK,httpx
+Trello Careers,https://trello.com/careers,yes,200,OK,httpx
+Basecamp Careers,https://basecamp.com/careers,no,404,Not Found,httpx
+Buffer Careers,https://buffer.com/journey,yes,200,OK,httpx
+Zapier Careers,https://zapier.com/careers/,no,404,Not Found,httpx
+Calendly Careers,https://calendly.com/careers/,yes,200,OK,httpx
+Loom Careers,https://www.loom.com/careers,yes,200,OK,httpx
+Typeform Careers,https://careers.typeform.com/,yes,200,OK,httpx
+Bubble Careers,https://bubble.io/careers,yes,200,OK,httpx
+ConvertKit Careers,https://convertkit.com/careers,yes,200,OK,httpx
+IFTTT Careers,https://ifttt.com/careers,yes,200,OK,httpx
+Weebly Careers,https://careers.weebly.com/,yes,200,OK,httpx
+Webflow Careers,https://webflow.com/careers,yes,200,OK,httpx
+Electronic Arts Careers,https://ea.com/careers,yes,200,OK,httpx
+Activision Careers,https://careers.activision.com/,yes,200,OK,httpx
+Blizzard Entertainment Careers,https://careers.blizzard.com/,yes,200,OK,httpx
+Epic Games Careers,https://www.epicgames.com/site/careers,yes,200,Forbidden,browser
+Riot Games Careers,https://www.riotgames.com/en/work-with-us,yes,200,OK,httpx
+Unity Careers,https://careers.unity.com/,yes,200,OK,httpx
+Roblox Careers,https://corp.roblox.com/careers/,yes,200,OK,httpx
+Discord Careers,https://discord.com/jobs,yes,200,OK,httpx
+Twitch Careers,https://www.twitch.tv/jobs/,yes,200,OK,httpx
+YouTube Careers,https://www.youtube.com/jobs/,yes,200,OK,httpx
+Disney Careers,https://jobs.disneycareers.com/,yes,200,OK,httpx
+NBCUniversal Careers,https://www.nbcunicareers.com/,yes,200,OK,httpx
+WarnerMedia Careers,https://careers.warnermediagroup.com/,no,,"TimeoutError: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to ""https://careers.warnermediagroup.com/"", waiting until ""domcontentloaded""
+",browser
+Paramount Careers,https://careers.viacomcbs.com/,yes,200,200,httpx
+Sony Pictures Careers,https://www.sonypictures.com/careers,no,404,Not Found,httpx
+Fox Corporation Careers,https://careers.foxcorporation.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.foxcorporation.com/
+Call log:
+  - navigating to ""https://careers.foxcorporation.com/"", waiting until ""domcontentloaded""
+",browser
+Discovery Careers,https://corporate.discovery.com/careers/,yes,200,OK,httpx
+AMC Networks Careers,https://careers.amcnetworks.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.amcnetworks.com/
+Call log:
+  - navigating to ""https://careers.amcnetworks.com/"", waiting until ""domcontentloaded""
+",browser
+Hulu Careers,https://www.hulu.com/careers/,yes,200,OK,httpx
+Peacock Careers,https://www.peacocktv.com/careers,no,404,Not Found,httpx
+Snapchat Careers,https://careers.snap.com/,yes,200,OK,httpx
+Pinterest Careers,https://careers.pinterest.com/,yes,200,Forbidden,browser
+Reddit Careers,https://www.redditinc.com/careers,yes,200,OK,httpx
+TikTok Careers,https://careers.tiktok.com/,yes,200,OK,httpx
+Bumble Careers,https://bumble.com/careers/,yes,200,OK,httpx
+DigitalOcean Careers,https://www.digitalocean.com/careers/,yes,200,OK,httpx
+MongoDB Careers,https://www.mongodb.com/careers,yes,200,OK,httpx
+Databricks Careers,https://www.databricks.com/company/careers,yes,200,OK,httpx
+Snowflake Careers,https://careers.snowflake.com/,yes,200,OK,httpx
+Palantir Careers,https://www.palantir.com/careers/,yes,200,OK,httpx
+HashiCorp Careers,https://www.hashicorp.com/careers,yes,200,OK,httpx
+Docker Careers,https://www.docker.com/careers/,yes,200,Forbidden,browser
+Elastic Careers,https://www.elastic.co/careers/,yes,200,OK,httpx
+Confluent Careers,https://www.confluent.io/careers/,yes,200,Too Many Requests,browser
+Cloudflare Careers,https://www.cloudflare.com/careers/,yes,200,OK,httpx
+Fastly Careers,https://www.fastly.com/careers/,yes,200,OK,httpx
+Akamai Careers,https://www.akamai.com/careers,no,,"TimeoutError: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to ""https://www.akamai.com/careers"", waiting until ""domcontentloaded""
+",browser
+Red Hat Careers,https://www.redhat.com/en/jobs,yes,200,OK,httpx
+ServiceNow Careers,https://careers.servicenow.com/,yes,200,Forbidden,browser
+Workday Careers,https://careers.workday.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.workday.com/
+Call log:
+  - navigating to ""https://careers.workday.com/"", waiting until ""domcontentloaded""
+",browser
+Splunk Careers,https://www.splunk.com/careers/,no,404,Not Found,httpx
+Tableau Careers,https://careers.tableau.com/,yes,200,OK,httpx
+IBM Corporation Careers,https://www.ibm.com/careers/,yes,200,OK,httpx
+HP Inc Careers,https://jobs.hp.com/,yes,200,OK,httpx
+Dell Technologies Careers,https://jobs.dell.com/,yes,200,OK,httpx
+CrowdStrike Careers,https://www.crowdstrike.com/careers/,yes,200,OK,httpx
+Palo Alto Networks Careers,https://jobs.paloaltonetworks.com/,yes,200,OK,httpx
+Fortinet Careers,https://www.fortinet.com/careers,no,404,Not Found,httpx
+Check Point Careers,https://www.checkpoint.com/careers/,yes,200,OK,httpx
+FireEye Careers,https://careers.fireeye.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.fireeye.com/
+Call log:
+  - navigating to ""https://careers.fireeye.com/"", waiting until ""domcontentloaded""
+",browser
+Okta Careers,https://www.okta.com/careers/,yes,200,OK,httpx
+Auth0 Careers,https://auth0.com/careers/,yes,200,OK,httpx
+Duo Security Careers,https://duo.com/careers,yes,200,OK,httpx
+Rapid7 Careers,https://www.rapid7.com/careers/,yes,200,OK,httpx
+Qualys Careers,https://www.qualys.com/careers/,yes,200,OK,httpx
+Symantec Careers,https://www.symantec.com/careers,no,404,Not Found,httpx
+McAfee Careers,https://careers.mcafee.com/,yes,200,OK,httpx
+Trend Micro Careers,https://careers.trendmicro.com/,no,,"Error: Page.goto: net::ERR_ADDRESS_UNREACHABLE at https://careers.trendmicro.com/
+Call log:
+  - navigating to ""https://careers.trendmicro.com/"", waiting until ""domcontentloaded""
+",browser
+Zscaler Careers,https://www.zscaler.com/careers,yes,200,OK,httpx
+Proofpoint Careers,https://www.proofpoint.com/careers,yes,200,OK,httpx
+GitHub Careers,https://github.com/careers,yes,200,OK,httpx
+GitLab Careers,https://about.gitlab.com/jobs/,yes,200,OK,httpx
+Atlassian Careers,https://www.atlassian.com/careers,yes,200,OK,httpx
+JetBrains Careers,https://www.jetbrains.com/careers/,yes,200,OK,httpx
+Postman Careers,https://www.postman.com/careers/,yes,200,OK,httpx
+Twilio Careers,https://www.twilio.com/careers,yes,200,OK,httpx
+SendGrid Careers,https://sendgrid.com/careers/,yes,200,OK,httpx
+Datadog Careers,https://www.datadoghq.com/careers/,yes,200,OK,httpx
+New Relic Careers,https://newrelic.com/careers,yes,200,OK,httpx
+PagerDuty Careers,https://careers.pagerduty.com/,yes,200,OK,httpx
+Zendesk Careers,https://jobs.zendesk.com/,yes,200,OK,httpx
+HubSpot Careers,https://www.hubspot.com/careers,yes,200,OK,httpx
+Mailchimp Careers,https://mailchimp.com/careers/,yes,200,OK,httpx
+SurveyMonkey Careers,https://www.surveymonkey.com/careers/,yes,200,OK,httpx
+Qualtrics Careers,https://www.qualtrics.com/careers/,yes,200,OK,httpx
+OpenAI Careers,https://openai.com/careers/,yes,200,Forbidden,browser
+Anthropic Careers,https://www.anthropic.com/careers,yes,200,OK,httpx
+Scale AI Careers,https://scale.com/careers,yes,200,OK,httpx
+DataRobot Careers,https://www.datarobot.com/careers/,yes,200,Forbidden,browser
+H2O.ai Careers,https://www.h2o.ai/company/careers/,yes,200,OK,httpx
+Weights & Biases Careers,https://wandb.ai/careers,yes,200,OK,httpx
+Hugging Face Careers,https://huggingface.co/careers,yes,200,OK,httpx
+Cohere Careers,https://cohere.com/careers,yes,200,OK,httpx
+Stability AI Careers,https://stability.ai/careers,yes,200,OK,httpx
+Midjourney Careers,https://www.midjourney.com/careers,yes,200,Forbidden,browser
+Cerebras Careers,https://www.cerebras.net/careers/,yes,200,OK,httpx
+SambaNova Careers,https://sambanova.ai/careers/,yes,200,OK,httpx
+Graphcore Careers,https://www.graphcore.ai/careers,yes,200,OK,httpx
+Groq Careers,https://groq.com/careers/,yes,200,OK,httpx
+Character.AI Careers,https://character.ai/careers,yes,200,OK,httpx
+Epic Systems Careers,https://careers.epic.com/,yes,200,OK,httpx
+Cerner Careers,https://careers.cerner.com/,yes,200,OK,httpx
+Allscripts Careers,https://careers.allscripts.com/,yes,200,OK,httpx
+McKesson Careers,https://careers.mckesson.com/,yes,200,OK,httpx
+UnitedHealth Careers,https://careers.unitedhealthgroup.com/,yes,200,OK,httpx
+CVS Health Careers,https://jobs.cvshealth.com/,yes,200,OK,httpx
+Walgreens Careers,https://jobs.walgreens.com/,yes,200,OK,httpx
+Pfizer Careers,https://www.pfizer.com/careers,yes,200,OK,httpx
+Johnson & Johnson Careers,https://careers.jnj.com/,yes,200,Forbidden,browser
+Moderna Careers,https://modernatx.com/careers,yes,200,OK,httpx
+23andMe Careers,https://www.23andme.com/careers/,yes,200,OK,httpx
+Illumina Careers,https://www.illumina.com/careers.html,no,404,Not Found,httpx
+Teladoc Careers,https://teladochealth.com/careers/,yes,200,OK,httpx
+Genentech Careers,https://www.gene.com/careers,yes,200,OK,httpx
+Biogen Careers,https://www.biogen.com/careers.html,yes,200,OK,httpx
+Gilead Careers,https://www.gilead.com/careers,yes,200,OK,httpx
+Amgen Careers,https://www.amgen.com/careers/,yes,200,OK,httpx
+Anthem Careers,https://careers.anthem.com/,yes,200,OK,httpx
+Cardinal Health Careers,https://jobs.cardinalhealth.com/,yes,200,OK,httpx
+Rite Aid Careers,https://careers.riteaid.com/,yes,200,OK,httpx
+Boeing Careers,https://jobs.boeing.com/,yes,200,OK,httpx
+Lockheed Martin Careers,https://www.lockheedmartinjobs.com/,yes,200,OK,httpx
+Northrop Grumman Careers,https://careers.northropgrumman.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.northropgrumman.com/
+Call log:
+  - navigating to ""https://careers.northropgrumman.com/"", waiting until ""domcontentloaded""
+",browser
+Raytheon Careers,https://careers.rtx.com/,yes,200,OK,httpx
+General Dynamics Careers,https://careers.gd.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.gd.com/
+Call log:
+  - navigating to ""https://careers.gd.com/"", waiting until ""domcontentloaded""
+",browser
+SpaceX Careers,https://www.spacex.com/careers/,yes,200,OK,httpx
+Blue Origin Careers,https://www.blueorigin.com/careers,yes,200,OK,httpx
+NASA Careers,https://www.usajobs.gov/Search/Results?a=NASA,yes,200,OK,httpx
+JPL Careers,https://www.jpl.nasa.gov/careers/,no,,"Error: Page.goto: net::ERR_CERT_DATE_INVALID at https://www.jpl.nasa.gov/careers/
+Call log:
+  - navigating to ""https://www.jpl.nasa.gov/careers/"", waiting until ""domcontentloaded""
+",browser
+Leidos Careers,https://careers.leidos.com/,yes,200,Forbidden,browser
+SAIC Careers,https://careers.saic.com/,no,,"Error: Page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://careers.saic.com/
+Call log:
+  - navigating to ""https://careers.saic.com/"", waiting until ""domcontentloaded""
+",browser
+L3Harris Careers,https://careers.l3harris.com/,yes,200,OK,httpx
+BAE Systems Careers,https://careers.baesystems.com/,yes,200,OK,httpx
+Honeywell Careers,https://careers.honeywell.com/,yes,200,ConnectError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010),browser
+Collins Aerospace Careers,https://careers.collinsaerospace.com/,yes,200,OK,httpx
+Ford Careers,https://corporate.ford.com/careers.html,no,,"TimeoutError: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to ""https://corporate.ford.com/careers.html"", waiting until ""domcontentloaded""
+",browser
+General Motors Careers,https://search-careers.gm.com/,yes,200,Forbidden,browser
+Tesla Motors Careers,https://www.tesla.com/careers,no,403,AttributeError: 'Page' object has no attribute 'response',browser
+Rivian Careers,https://careers.rivian.com/,yes,200,OK,httpx
+Lucid Motors Careers,https://careers.lucidmotors.com/,no,,"Error: Page.goto: net::ERR_SSL_VERSION_OR_CIPHER_MISMATCH at https://careers.lucidmotors.com/
+Call log:
+  - navigating to ""https://careers.lucidmotors.com/"", waiting until ""domcontentloaded""
+",browser
+Toyota Careers,https://www.toyota.com/careers/,yes,200,OK,httpx
+Honda Careers,https://careers.honda.com/,yes,200,OK,httpx
+BMW Careers,https://www.bmwgroup.jobs/,yes,200,"RemoteProtocolError: <StreamReset stream_id:3, error_code:2, remote_reset:True>",browser
+Mercedes-Benz Careers,https://careers.mercedes-benz.com/,no,403,AttributeError: 'Page' object has no attribute 'response',browser
+Volkswagen Careers,https://careers.volkswagen.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.volkswagen.com/
+Call log:
+  - navigating to ""https://careers.volkswagen.com/"", waiting until ""domcontentloaded""
+",browser
+Nissan Careers,https://www.nissan-global.com/EN/CAREERS/,no,404,Not Found,httpx
+Hyundai Careers,https://careers.hyundai.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.hyundai.com/
+Call log:
+  - navigating to ""https://careers.hyundai.com/"", waiting until ""domcontentloaded""
+",browser
+Kia Careers,https://careers.kia.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.kia.com/
+Call log:
+  - navigating to ""https://careers.kia.com/"", waiting until ""domcontentloaded""
+",browser
+Subaru Careers,https://careers.subaru.com/,no,,"Error: Page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://careers.subaru.com/
+Call log:
+  - navigating to ""https://careers.subaru.com/"", waiting until ""domcontentloaded""
+",browser
+Mazda Careers,https://careers.mazda.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.mazda.com/
+Call log:
+  - navigating to ""https://careers.mazda.com/"", waiting until ""domcontentloaded""
+",browser
+Verizon Careers,https://www.verizon.com/careers/,yes,200,OK,httpx
+AT&T Careers,https://about.att.com/careers,no,403,AttributeError: 'Page' object has no attribute 'response',browser
+T-Mobile Careers,https://www.t-mobile.com/careers,yes,200,OK,httpx
+Comcast Careers,https://jobs.comcast.com/,yes,200,OK,httpx
+Charter Careers,https://jobs.spectrum.com/,yes,200,OK,httpx
+Cox Communications Careers,https://jobs.cox.com/,yes,200,Forbidden,browser
+CenturyLink Careers,https://jobs.lumen.com/,yes,200,OK,httpx
+Sprint Careers,https://careers.sprint.com/,yes,200,OK,httpx
+US Cellular Careers,https://careers.uscellular.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.uscellular.com/
+Call log:
+  - navigating to ""https://careers.uscellular.com/"", waiting until ""domcontentloaded""
+",browser
+Dish Network Careers,https://careers.dish.com/,yes,200,OK,httpx
+Alaska Airlines Careers,https://careers.alaskaair.com/,yes,200,OK,httpx
+Juniper Networks Careers,https://careers.juniper.net/,yes,200,OK,httpx
+Arista Networks Careers,https://careers.arista.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.arista.com/
+Call log:
+  - navigating to ""https://careers.arista.com/"", waiting until ""domcontentloaded""
+",browser
+F5 Networks Careers,https://f5.com/careers,yes,200,OK,httpx
+Palo Alto Networks Careers,https://jobs.paloaltonetworks.com/,yes,200,OK,httpx
+DoorDash Careers,https://careers.doordash.com/,yes,200,Forbidden,browser
+Grubhub Careers,https://careers.grubhub.com/,yes,200,OK,httpx
+Uber Eats Careers,https://www.uber.com/careers/,yes,200,OK,httpx
+Instacart Careers,https://careers.instacart.com/,yes,200,OK,httpx
+Shipt Careers,https://careers.shipt.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.shipt.com/
+Call log:
+  - navigating to ""https://careers.shipt.com/"", waiting until ""domcontentloaded""
+",browser
+Freshly Careers,https://www.freshly.com/careers,no,404,Not Found,httpx
+Blue Apron Careers,https://www.blueapron.com/careers,yes,200,Forbidden,browser
+HelloFresh Careers,https://careers.hellofresh.com/,yes,200,OK,httpx
+Gobble Careers,https://www.gobble.com/careers,yes,200,OK,httpx
+Postmates Careers,https://postmates.com/careers,no,404,Not Found,httpx
+Seamless Careers,https://careers.seamless.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.seamless.com/
+Call log:
+  - navigating to ""https://careers.seamless.com/"", waiting until ""domcontentloaded""
+",browser
+Caviar Careers,https://careers.caviar.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.caviar.com/
+Call log:
+  - navigating to ""https://careers.caviar.com/"", waiting until ""domcontentloaded""
+",browser
+Just Eat Careers,https://careers.just-eat.com/,yes,200,OK,httpx
+Deliveroo Careers,https://careers.deliveroo.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.deliveroo.com/
+Call log:
+  - navigating to ""https://careers.deliveroo.com/"", waiting until ""domcontentloaded""
+",browser
+Lyft Careers,https://www.lyft.com/careers,yes,200,OK,httpx
+Zillow Group Careers,https://careers.zillowgroup.com/,yes,200,OK,httpx
+Redfin Careers,https://careers.redfin.com/,yes,200,OK,httpx
+Opendoor Careers,https://careers.opendoor.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.opendoor.com/
+Call log:
+  - navigating to ""https://careers.opendoor.com/"", waiting until ""domcontentloaded""
+",browser
+Compass Careers,https://www.compass.com/careers/,yes,200,OK,httpx
+Realtor.com Careers,https://careers.realtor.com/,yes,200,OK,httpx
+Apartments.com Careers,https://careers.apartments.com/,no,,"Error: Page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://careers.apartments.com/
+Call log:
+  - navigating to ""https://careers.apartments.com/"", waiting until ""domcontentloaded""
+",browser
+Rent.com Careers,https://careers.rent.com/,no,404,Not Found,httpx
+Trulia Careers,https://careers.trulia.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.trulia.com/
+Call log:
+  - navigating to ""https://careers.trulia.com/"", waiting until ""domcontentloaded""
+",browser
+Rentals.com Careers,https://careers.rentals.com/,yes,200,OK,httpx
+RealPage Careers,https://careers.realpage.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.realpage.com/
+Call log:
+  - navigating to ""https://careers.realpage.com/"", waiting until ""domcontentloaded""
+",browser
+Expedia Group Careers,https://careers.expediagroup.com/,yes,200,OK,httpx
+Booking Holdings Careers,https://careers.bookingholdings.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.bookingholdings.com/
+Call log:
+  - navigating to ""https://careers.bookingholdings.com/"", waiting until ""domcontentloaded""
+",browser
+Priceline Careers,https://careers.priceline.com/,yes,200,OK,httpx
+Kayak Careers,https://careers.kayak.com/,yes,200,OK,httpx
+Orbitz Careers,https://careers.orbitz.com/,no,,"TimeoutError: Page.goto: Timeout 15000ms exceeded.
+Call log:
+  - navigating to ""https://careers.orbitz.com/"", waiting until ""domcontentloaded""
+",browser
+Travelocity Careers,https://careers.travelocity.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.travelocity.com/
+Call log:
+  - navigating to ""https://careers.travelocity.com/"", waiting until ""domcontentloaded""
+",browser
+TripAdvisor Careers,https://careers.tripadvisor.com/,yes,200,OK,httpx
+Hotels.com Careers,https://careers.hotels.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.hotels.com/
+Call log:
+  - navigating to ""https://careers.hotels.com/"", waiting until ""domcontentloaded""
+",browser
+Marriott Careers,https://careers.marriott.com/,yes,200,OK,httpx
+Hilton Careers,https://jobs.hilton.com/,yes,200,OK,httpx
+General Electric Careers,https://jobs.ge.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://jobs.ge.com/
+Call log:
+  - navigating to ""https://jobs.ge.com/"", waiting until ""domcontentloaded""
+",browser
+3M Careers,https://careers.3m.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.3m.com/
+Call log:
+  - navigating to ""https://careers.3m.com/"", waiting until ""domcontentloaded""
+",browser
+Caterpillar Careers,https://careers.caterpillar.com/,yes,200,Forbidden,browser
+John Deere Careers,https://careers.deere.com/,yes,200,OK,httpx
+Emerson Careers,https://careers.emerson.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.emerson.com/
+Call log:
+  - navigating to ""https://careers.emerson.com/"", waiting until ""domcontentloaded""
+",browser
+Rockwell Automation Careers,https://careers.rockwellautomation.com/,no,,"Error: Page.goto: net::ERR_SSL_VERSION_OR_CIPHER_MISMATCH at https://careers.rockwellautomation.com/
+Call log:
+  - navigating to ""https://careers.rockwellautomation.com/"", waiting until ""domcontentloaded""
+",browser
+Schneider Electric Careers,https://careers.se.com/,yes,200,OK,httpx
+Siemens Careers,https://jobs.siemens.com/,yes,200,OK,httpx
+ABB Careers,https://careers.abb.com/,no,,"Error: Page.goto: net::ERR_NAME_NOT_RESOLVED at https://careers.abb.com/
+Call log:
+  - navigating to ""https://careers.abb.com/"", waiting until ""domcontentloaded""
+",browser
+Garmin Careers,https://careers.garmin.com/,yes,200,OK,httpx
+Accenture Careers,https://www.accenture.com/us-en/careers,yes,200,OK,httpx
+Deloitte Careers,https://careers.deloitte.com/,yes,200,OK,httpx
+EY Careers,https://careers.ey.com/,yes,200,200,httpx
+KPMG Careers,https://home.kpmg/xx/en/home/careers.html,yes,200,OK,httpx
+PwC Careers,https://www.pwc.com/us/en/careers.html,yes,200,OK,httpx
+McKinsey Careers,https://www.mckinsey.com/careers,no,,"Error: Page.goto: net::ERR_HTTP2_PROTOCOL_ERROR at https://www.mckinsey.com/careers
+Call log:
+  - navigating to ""https://www.mckinsey.com/careers"", waiting until ""domcontentloaded""
+",browser
+Boston Consulting Group Careers,https://careers.bcg.com/,yes,200,OK,httpx
+Bain & Company Careers,https://www.bain.com/careers/,yes,200,OK,httpx
+Cognizant Careers,https://careers.cognizant.com/,yes,200,Forbidden,browser
+Cargill Careers,https://careers.cargill.com/,yes,200,OK,httpx

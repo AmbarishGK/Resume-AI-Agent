@@ -1,0 +1,42 @@
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+marnow.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+debug/
+*.log
+*.aux
+*.fdb_latexmk
+*.fls
+*.pdf
+!app/data/resumes/*.pdf
+
+# Ollama models (if downloaded)
+mistral*/
+phi3*/
