@@ -24,137 +24,246 @@ import streamlit as st
 
 API_BASE = "http://127.0.0.1:8100"
 
-st.set_page_config(page_title="MaRNoW Resume+JD RAG", layout="centered")
+st.set_page_config(page_title="MaRNoW Resume+JD Copilot", layout="centered")
 
-st.title("📄 MaRNoW: Resume + JD RAG Copilot")
-st.write("Backend: FastAPI + Chroma + Ollama (resume + JD from marnow.db)")
+st.title("MaRNoW: Resume + JD Copilot")
+st.write("Backend: FastAPI + Chroma + Ollama (upload resume PDF + paste JD text)")
 
-
-# Persist last QA result across reruns
-if "qa_result" not in st.session_state:
-    st.session_state["qa_result"] = None
+main_tab, sources_tab = st.tabs(["Copilot Chat", "Sources / Debug"])
 
 
-st.sidebar.header("1. Ingest Resume + JD from marnow.db")
-resume_id = st.sidebar.number_input("Resume ID (resumes.id)", min_value=1, step=1, value=1)
-job_id = st.sidebar.number_input("Job ID (job_posts.id)", min_value=1, step=1, value=1)
+if "resume_id" not in st.session_state:
+    st.session_state["resume_id"] = None
+if "job_id" not in st.session_state:
+    st.session_state["job_id"] = None
+if "latest_resume_id" not in st.session_state:
+    st.session_state["latest_resume_id"] = None
+if "last_sources" not in st.session_state:
+    st.session_state["last_sources"] = []
 
-if st.sidebar.button("Ingest this pair"):
-    with st.spinner("Loading resume+JD and indexing into vector store..."):
-        try:
-            resp = requests.post(
-                f"{API_BASE}/ingest_pair",
-                json={"resume_id": int(resume_id), "job_id": int(job_id)},
-                timeout=120,
-            )
-        except Exception as e:
-            st.sidebar.error(f"Request failed: {e}")
-            resp = None
-    if resp is not None:
-        if resp.ok:
-            data = resp.json()
-            st.sidebar.success(
-                f"Ingested pair (resume_id={data['resume_id']}, job_id={data['job_id']}). "
-                f"Indexed {data['num_documents']} chunks."
-            )
-        else:
-            st.sidebar.error(f"Ingest failed: {resp.text}")
+st.sidebar.header("1) Ingest")
+resume_file = st.sidebar.file_uploader("Upload resume (.pdf)", type=["pdf"])
+jd_text = st.sidebar.text_area("Paste job description (JD)", height=200)
+company = st.sidebar.text_input("Company (optional)")
+role = st.sidebar.text_input("Role (optional)")
 
-
-st.header("2. Ask Questions (RAG over Resume + JD)")
-
-query = st.text_input(
-    "Enter your question (e.g., 'List JD skills I lack', 'Rewrite my bullets for robotics'):"
-)
-mode_label = st.selectbox(
-    "Restrict retrieval to:",
-    ["All (JD + resume)", "JD only", "Resume only"],
-    index=0,
-)
-
-mode_map = {
-    "All (JD + resume)": "all",
-    "JD only": "jd",
-    "Resume only": "resume",
-}
-mode = mode_map[mode_label]
-
-
-if st.button("Ask"):
-    if not query.strip():
-        st.warning("Please enter a question.")
+if st.sidebar.button("Ingest resume + JD"):
+    if resume_file is None:
+        st.sidebar.error("Please upload a resume PDF")
+    elif not (jd_text or "").strip():
+        st.sidebar.error("Please paste the JD text")
     else:
-        with st.spinner("Querying RAG backend..."):
-            payload = {"query": query, "mode": mode}
+        with st.spinner("Uploading + indexing into vector store..."):
             try:
-                resp = requests.post(f"{API_BASE}/query", json=payload, timeout=180)
+                files = {
+                    "resume_file": (resume_file.name, resume_file.getvalue(), "application/pdf")
+                }
+                data = {
+                    "jd_text": jd_text,
+                    "company": company,
+                    "role": role,
+                    "source_url": "",
+                }
+                resp = requests.post(
+                    f"{API_BASE}/ingest_upload",
+                    files=files,
+                    data=data,
+                    timeout=180,
+                )
             except Exception as e:
-                st.error(f"Request failed: {e}")
+                st.sidebar.error(f"Request failed: {e}")
                 resp = None
 
         if resp is not None:
             if resp.ok:
-                st.session_state["qa_result"] = resp.json()
+                out = resp.json()
+                st.session_state["resume_id"] = out["resume_id"]
+                st.session_state["job_id"] = out["job_id"]
+                st.session_state["latest_resume_id"] = out["resume_id"]
+                st.sidebar.success(
+                    f"Ingested (resume_id={out['resume_id']}, job_id={out['job_id']}) with {out['num_documents']} chunks."
+                )
             else:
-                st.error(f"Query failed: {resp.text}")
-                st.session_state["qa_result"] = None
+                st.sidebar.error(f"Ingest failed: {resp.text}")
+
+st.sidebar.divider()
+st.sidebar.header("2) Models")
+small_model = st.sidebar.text_input("Small model (analysis)", value="mistral:instruct")
+large_model = st.sidebar.text_input("Large model (rewrite/cover letter)", value="llama2:13b")
+
+st.sidebar.divider()
+st.sidebar.header("3) Actions")
+
+ids_ready = st.session_state.get("resume_id") and st.session_state.get("job_id")
+
+if st.sidebar.button("Check score"):
+    if not ids_ready:
+        st.sidebar.error("Ingest first")
+    else:
+        with st.spinner("Scoring..."):
+            try:
+                resp = requests.post(
+                    f"{API_BASE}/score",
+                    json={"resume_id": int(st.session_state["latest_resume_id"]), "job_id": int(st.session_state["job_id"])},
+                    timeout=60,
+                )
+                if resp.ok:
+                    st.session_state["last_score"] = resp.json()
+                else:
+                    st.sidebar.error(resp.text)
+            except Exception as e:
+                st.sidebar.error(f"Request failed: {e}")
+
+if st.sidebar.button("Apply suggested changes"):
+    if not ids_ready:
+        st.sidebar.error("Ingest first")
+    else:
+        with st.spinner("Running copilot rewrite + rescoring..."):
+            try:
+                resp = requests.post(
+                    f"{API_BASE}/apply_copilot_rewrite",
+                    json={
+                        "resume_id": int(st.session_state["latest_resume_id"]),
+                        "job_id": int(st.session_state["job_id"]),
+                        "small_model": small_model,
+                        "large_model": large_model,
+                        "reindex": True,
+                    },
+                    timeout=600,
+                )
+            except Exception as e:
+                st.sidebar.error(f"Request failed: {e}")
+                resp = None
+
+        if resp is not None:
+            if resp.ok:
+                out = resp.json()
+                st.session_state["latest_resume_id"] = out["new_resume_id"]
+                st.session_state["last_apply"] = out
+                st.sidebar.success(
+                    f"Applied. New resume_id={out['new_resume_id']} (Δ total = {out['delta_total']})."
+                )
+            else:
+                st.sidebar.error(f"Apply failed: {resp.text}")
+
+st.sidebar.divider()
+st.sidebar.header("4) Download")
+if ids_ready:
+    rid = int(st.session_state["latest_resume_id"])
+    if st.sidebar.button("Fetch LaTeX (.tex)"):
+        try:
+            r = requests.get(f"{API_BASE}/export/resume/{rid}?format=tex", timeout=60)
+            if r.ok:
+                st.session_state["download_tex"] = r.text
+            else:
+                st.sidebar.error(r.text)
+        except Exception as e:
+            st.sidebar.error(f"Request failed: {e}")
+
+    if st.sidebar.button("Fetch PDF (.pdf)"):
+        try:
+            r = requests.get(f"{API_BASE}/export/resume/{rid}?format=pdf", timeout=120)
+            if r.ok:
+                st.session_state["download_pdf"] = r.content
+            else:
+                st.sidebar.error(r.text)
+        except Exception as e:
+            st.sidebar.error(f"Request failed: {e}")
+
+    if st.session_state.get("download_tex"):
+        st.sidebar.download_button(
+            "Download LaTeX",
+            data=st.session_state["download_tex"],
+            file_name=f"resume_{rid}.tex",
+            mime="application/x-tex",
+        )
+
+    if st.session_state.get("download_pdf"):
+        st.sidebar.download_button(
+            "Download PDF",
+            data=st.session_state["download_pdf"],
+            file_name=f"resume_{rid}.pdf",
+            mime="application/pdf",
+        )
 
 
-result = st.session_state.get("qa_result")
-if result:
-    st.subheader("Answer")
-    st.write(result["answer"])
+with main_tab:
+    st.header("Chat")
 
-    st.subheader("Sources (retrieved context)")
-    seen_keys = set()
-    for i, src in enumerate(result["sources"]):
-        source_type = src.get("source") or "?"
-        resume_id_src = src.get("resume_id")
-        job_id_src = src.get("job_id")
-        company = src.get("company") or ""
-        role = src.get("role") or ""
-        content = src.get("content") or src.get("preview") or ""
+    ids_ready = st.session_state.get("resume_id") and st.session_state.get("job_id")
+    if not ids_ready:
+        st.info("Upload a resume PDF and paste a JD in the sidebar, then click 'Ingest resume + JD'.")
 
-        key = (source_type, resume_id_src, job_id_src, content[:50])
-        if key in seen_keys:
-            continue
-        seen_keys.add(key)
+    # Show score panel if we have it
+    if st.session_state.get("last_score"):
+        s = st.session_state["last_score"]
+        st.subheader("Current score")
+        st.json(s)
 
-        label = f"Source {i+1} – {source_type.upper()}"
-        if source_type == "jd" and company or role:
-            label += f" ({company} / {role})"
-        elif source_type == "resume" and resume_id_src:
-            label += f" (resume_id={resume_id_src})"
+    if st.session_state.get("last_apply"):
+        a = st.session_state["last_apply"]
+        st.subheader("After applying changes")
+        st.write(f"New resume_id: {a['new_resume_id']} | Δ total: {a['delta_total']}")
+        st.json({"before": a["score_before"], "after": a["score_after"]})
+        with st.expander("Skills rewrite (after)"):
+            st.code(a.get("skills_after") or "")
+        with st.expander("Experience rewrite (after)"):
+            st.code(a.get("experience_after") or "")
 
-        with st.expander(label):
-            if company or role:
-                st.write(f"**JD company/role:** {company} / {role}")
-            if resume_id_src:
-                st.write(f"**Resume ID:** {resume_id_src}")
+    if "messages" not in st.session_state:
+        st.session_state["messages"] = []
 
-            st.write("---")
-            st.write(content)
+    for m in st.session_state["messages"]:
+        with st.chat_message(m["role"]):
+            st.write(m["content"])
 
-            if st.button(f"Explain Source {i+1}", key=f"explain_{i}"):
-                with st.spinner("Generating explanation..."):
+    user_msg = st.chat_input("Ask anything (your 20 prompts or custom).")
+    if user_msg:
+        st.session_state["messages"].append({"role": "user", "content": user_msg})
+        with st.chat_message("user"):
+            st.write(user_msg)
+
+        if not ids_ready:
+            with st.chat_message("assistant"):
+                st.write("Ingest a resume+JD first.")
+        else:
+            with st.chat_message("assistant"):
+                with st.spinner("Thinking..."):
                     try:
-                        exp_resp = requests.post(
-                            f"{API_BASE}/explain",
-                            json={"content": content},
-                            timeout=180,
+                        resp = requests.post(
+                            f"{API_BASE}/chat",
+                            json={
+                                "resume_id": int(st.session_state["latest_resume_id"]),
+                                "job_id": int(st.session_state["job_id"]),
+                                "message": user_msg,
+                                "mode": "all",
+                                "small_model": small_model,
+                                "large_model": large_model,
+                            },
+                            timeout=600,
                         )
-                        if exp_resp.ok:
-                            exp = exp_resp.json().get("explanation", "")
-                            st.markdown("### Explanation")
-                            st.write(exp)
-                        else:
-                            st.error(f"Explain failed: {exp_resp.text}")
                     except Exception as e:
                         st.error(f"Request failed: {e}")
+                        resp = None
 
+                    if resp is not None and resp.ok:
+                        data = resp.json()
+                        st.session_state["last_sources"] = data.get("sources") or []
+                        answer = data.get("answer") or ""
+                        st.write(answer)
+                        st.session_state["messages"].append({"role": "assistant", "content": answer})
+                    elif resp is not None:
+                        st.error(resp.text)
 
-st.info(
-    "Tip: try prompts like 'List JD skills and show which ones I lack', "
-    "'Rewrite my projects bullets to emphasize robotics and ML', or "
-    "'Suggest 3 bullets that better highlight LLM experience while staying truthful.'"
-)
+with sources_tab:
+    st.header("Retrieved sources")
+    srcs = st.session_state.get("last_sources") or []
+    if not srcs:
+        st.info("No sources yet. Ask a question in Chat after ingesting.")
+    else:
+        for i, src in enumerate(srcs):
+            label = f"Source {i+1}: {src.get('source')}"
+            if src.get("company") or src.get("role"):
+                label += f" ({src.get('company') or ''} / {src.get('role') or ''})"
+            with st.expander(label):
+                st.code(src.get("content") or src.get("preview") or "")

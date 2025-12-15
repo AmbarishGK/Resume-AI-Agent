@@ -113,7 +113,7 @@ Edit `app/config/careers.yaml` to add or modify company career page configuratio
 
 ## Dependencies
 
-All dependencies are managed via `requirements.txt`:
+All core dependencies are managed via `requirements.txt`:
 - Playwright (for web scraping)
 - BeautifulSoup4 (for HTML parsing)
 - PyYAML (for configuration)
@@ -121,6 +121,18 @@ All dependencies are managed via `requirements.txt`:
 - pypdf, python-docx (for resume parsing)
 
 See `requirements.txt` for complete list.
+
+### Optional: RAG server + Streamlit UI
+
+The Resume+JD RAG server (`tools/rag_resume_server.py`) and Streamlit UI (`tools/rag_resume_app.py`) require additional dependencies in `requirements_rag.txt`.
+
+```bash
+uv pip install -r requirements_rag.txt
+```
+
+### Optional: PDF export via LaTeX
+
+The API endpoint `GET /export/resume/{resume_id}?format=pdf` requires a LaTeX engine (`pdflatex`). If it is not installed, you can still export `.tex`.
 
 ## Documentation
 

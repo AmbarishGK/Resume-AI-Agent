@@ -1,0 +1,18 @@
+# Optional deps for tools/rag_resume_server.py + tools/rag_resume_app.py
+# Install with: uv pip install -r requirements_rag.txt
+
+fastapi>=0.110
+uvicorn[standard]>=0.27
+python-multipart>=0.0.9  # required for FastAPI UploadFile/Form
+
+# RAG stack
+chromadb>=0.5
+langchain-core>=0.2
+langchain-community>=0.2
+langchain-text-splitters>=0.2
+
+# UI
+streamlit>=1.33
+
+# Already in base requirements, but referenced widely
+requests>=2.31
