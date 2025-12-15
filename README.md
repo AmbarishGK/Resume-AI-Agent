@@ -76,5 +76,3 @@ GitHub Pages:
 - `SETUP.md` – setup notes
 - `WORKFLOW.md` – pipeline details + flags
 - `TROUBLESHOOTING.md` – common failures
-
-`FLOW_SUMMARY.md` and `FLOW_ANALYSIS.md` are older scratchpad docs kept for reference.
