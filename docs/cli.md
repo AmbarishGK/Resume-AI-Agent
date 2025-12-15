@@ -5,7 +5,11 @@ The CLI lives in `marnow/cli.py`.
 ## Initialize DB
 
 ```bash
+# creates ./marnow.db by default
 python -m marnow.cli initdb
+
+# optional: seed skills (recommended before matching)
+python -m marnow.cli seed-skills app/data/skills/skills.csv
 ```
 
 ## Ingest job descriptions

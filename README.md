@@ -37,6 +37,13 @@ python -m marnow.cli initdb
 python -m marnow.cli ingest-jd app/data/jds/company-role.txt
 ```
 
+Database init (recommended before matching):
+
+```bash
+python -m marnow.cli initdb
+python -m marnow.cli seed-skills app/data/skills/skills.csv
+```
+
 Resume ingestion + matching:
 
 ```bash

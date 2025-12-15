@@ -65,7 +65,11 @@ python -m marnow.cli ingest-jd app/data/jds/company-role.txt
    - Parses JD text files
    - Stores in SQLite database for matching
 
-4. **Match Resumes** (`marnow/cli.py`)
+4. **Initialize DB / seed skills** (`marnow/cli.py`)
+   - Init DB: `python -m marnow.cli initdb`
+   - (Optional) seed skills: `python -m marnow.cli seed-skills app/data/skills/skills.csv`
+
+5. **Match Resumes** (`marnow/cli.py`)
    - Ingest resumes: `python -m marnow.cli ingest-resume resume.pdf`
    - Match: `python -m marnow.cli match <resume_id> <job_id>`
    - Report: `python -m marnow.cli report <match_id>`

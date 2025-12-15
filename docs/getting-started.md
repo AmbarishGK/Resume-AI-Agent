@@ -29,7 +29,25 @@ pip install -r requirements.txt
 python -m playwright install chromium
 ```
 
-## 3) Run the pipeline
+## 3) Create the database
+
+The DB is SQLite. By default it’s created at `./marnow.db`.
+
+```bash
+python -m marnow.cli initdb
+
+# optional: seed the skills table (used by the matcher)
+python -m marnow.cli seed-skills app/data/skills/skills.csv
+```
+
+If you want the DB somewhere else:
+
+```bash
+export MARNOW_DB=/path/to/marnow.db
+python -m marnow.cli initdb
+```
+
+## 4) Run the pipeline
 
 ```bash
 python tools/workflow.py
@@ -39,9 +57,9 @@ Outputs:
 
 - scraped listings: `app/data/jobs/jobs.csv`
 - fetched JDs: `app/data/jds/*.txt`
-- SQLite DB: `marnow.db`
+- SQLite DB: `marnow.db` (or whatever `MARNOW_DB` points to)
 
-## 4) Ingest a resume + run a match
+## 5) Ingest a resume + run a match
 
 ```bash
 python -m marnow.cli ingest-resume app/data/resumes/resume.pdf

@@ -4,7 +4,9 @@ The entry point is `tools/workflow.py`. It orchestrates:
 
 1. scrape jobs -> `app/data/jobs/jobs.csv`
 2. fetch job descriptions -> `app/data/jds/*.txt`
-3. ingest JDs into SQLite -> `marnow.db`
+3. ingest JDs into SQLite -> `marnow.db` (or `MARNOW_DB`)
+
+Note: `workflow.py` will create the DB if needed, but for manual usage you can run `python -m marnow.cli initdb`.
 
 ## Basic run
 
