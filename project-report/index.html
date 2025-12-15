@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://ambarishgk.github.io/Resume-AI-Agent/project-report/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Project Report - Resume-AI-Agent</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Project Report";
+        var mkdocs_page_input_path = "project-report.md";
+        var mkdocs_page_url = "/Resume-AI-Agent/project-report/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Resume-AI-Agent
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Project Report</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#problem">Problem</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#goal">Goal</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#system-overview">System overview</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-data-collection">1) Data collection</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-storage-ingestion">2) Storage + ingestion</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-matching-copilot">3) Matching + copilot</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#how-to-run-recommended-demo-path">How to run (recommended demo path)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#a-pipeline-demo-scrape-fetch-ingest">A) Pipeline demo (scrape -&gt; fetch -&gt; ingest)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#b-matching-demo-resume-match-report">B) Matching demo (resume -&gt; match -&gt; report)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#c-streamlit-copilot-demo-interactive">C) Streamlit copilot demo (interactive)</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#limitations-notes">Limitations / notes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#artifacts">Artifacts</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../getting-started/">Getting Started</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Usage</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../workflow/">Pipeline (Workflow)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../cli/">CLI (DB/Ingest/Match)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../streamlit-copilot/">Streamlit Copilot (RAG)</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Reference</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup/">Setup Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">Troubleshooting</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Resume-AI-Agent</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Project Report</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="mini-project-report">Mini project report</h1>
+<h2 id="problem">Problem</h2>
+<p>When tailoring a resume to a job description (JD), it’s easy to miss keywords, responsibilities, and domain cues that an ATS or recruiter expects. Doing this manually is slow and inconsistent.</p>
+<h2 id="goal">Goal</h2>
+<p>Build a reproducible pipeline that:</p>
+<ul>
+<li>collects job postings + full job descriptions</li>
+<li>stores JDs and resumes in a local database</li>
+<li>produces a transparent match score + gap list</li>
+<li>provides an interactive Streamlit "copilot" UI that can analyze/rewrite a resume for a specific JD</li>
+</ul>
+<h2 id="system-overview">System overview</h2>
+<p>The repo has three layers:</p>
+<h3 id="1-data-collection">1) Data collection</h3>
+<ul>
+<li><strong>Scraper</strong>: <code>tools/jobscraper/main.py</code> (Playwright)</li>
+<li><strong>JD fetcher</strong>: <code>tools/make_jds_from_jobs.py</code> (requests + BeautifulSoup)</li>
+<li><strong>Orchestrator</strong>: <code>tools/workflow.py</code> runs scrape -&gt; fetch -&gt; ingest</li>
+</ul>
+<h3 id="2-storage-ingestion">2) Storage + ingestion</h3>
+<ul>
+<li>SQLite DB: <code>marnow.db</code> (or <code>MARNOW_DB</code>)</li>
+<li>Ingestion utilities: <code>marnow/ingest.py</code></li>
+<li>CLI: <code>marnow/cli.py</code></li>
+</ul>
+<h3 id="3-matching-copilot">3) Matching + copilot</h3>
+<ul>
+<li><strong>Heuristic matcher</strong>: <code>marnow/match.py</code></li>
+<li>computes component scores (skills overlap, responsibilities overlap, seniority/domain heuristics)</li>
+<li>outputs missing skills (top gaps)</li>
+<li><strong>RAG + Copilot server</strong>: <code>tools/rag_resume_server.py</code> (FastAPI + Chroma + Ollama)</li>
+<li><strong>Streamlit UI</strong>: <code>tools/rag_resume_app.py</code></li>
+<li>upload resume PDF + paste JD text</li>
+<li>check score, apply suggested changes, and export LaTeX/PDF</li>
+</ul>
+<h2 id="how-to-run-recommended-demo-path">How to run (recommended demo path)</h2>
+<h3 id="a-pipeline-demo-scrape-fetch-ingest">A) Pipeline demo (scrape -&gt; fetch -&gt; ingest)</h3>
+<pre><code class="language-bash">python tools/workflow.py
+</code></pre>
+<p>Expected artifacts:
+- <code>app/data/jobs/jobs.csv</code>
+- <code>app/data/jds/*.txt</code>
+- <code>marnow.db</code></p>
+<h3 id="b-matching-demo-resume-match-report">B) Matching demo (resume -&gt; match -&gt; report)</h3>
+<pre><code class="language-bash">python -m marnow.cli initdb
+python -m marnow.cli seed-skills app/data/skills/skills.csv
+
+python -m marnow.cli ingest-resume /path/to/your_resume.pdf
+python tools/db_cli.py list-resumes --limit 10
+python tools/db_cli.py list-jobs --limit 10
+python -m marnow.cli match &lt;resume_id&gt; &lt;job_id&gt;
+python -m marnow.cli report &lt;match_id&gt;
+</code></pre>
+<h3 id="c-streamlit-copilot-demo-interactive">C) Streamlit copilot demo (interactive)</h3>
+<p>See <code>Streamlit Copilot (RAG)</code> for the full steps.</p>
+<h2 id="limitations-notes">Limitations / notes</h2>
+<ul>
+<li>Scraping is config-driven but career sites change often; selectors may need updates.</li>
+<li>The baseline match score is heuristic (intended to be transparent and fast).</li>
+<li>The RAG/copilot features depend on a local Ollama setup and model availability.</li>
+</ul>
+<h2 id="artifacts">Artifacts</h2>
+<ul>
+<li>Code: <code>tools/</code>, <code>marnow/</code>, <code>app/config/</code></li>
+<li>Data artifacts: <code>app/data/jobs/jobs.csv</code>, <code>app/data/jds/*.txt</code></li>
+<li>DB artifact (generated): <code>marnow.db</code></li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../getting-started/" class="btn btn-neutral float-right" title="Getting Started">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../getting-started/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

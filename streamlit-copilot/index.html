@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://ambarishgk.github.io/Resume-AI-Agent/streamlit-copilot/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Streamlit Copilot (RAG) - Resume-AI-Agent</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Streamlit Copilot (RAG)";
+        var mkdocs_page_input_path = "streamlit-copilot.md";
+        var mkdocs_page_url = "/Resume-AI-Agent/streamlit-copilot/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Resume-AI-Agent
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project-report/">Project Report</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../getting-started/">Getting Started</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Usage</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../workflow/">Pipeline (Workflow)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../cli/">CLI (DB/Ingest/Match)</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Streamlit Copilot (RAG)</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#what-it-does">What it does</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-install-optional-dependencies">1) Install optional dependencies</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-start-ollama-pull-models">2) Start Ollama + pull models</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#run">Run</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-start-the-backend">1) Start the backend</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-start-the-streamlit-ui">2) Start the Streamlit UI</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#typical-flow-in-the-ui">Typical flow in the UI</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#notes">Notes</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Reference</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../setup/">Setup Notes</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../troubleshooting/">Troubleshooting</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Resume-AI-Agent</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Usage</li>
+      <li class="breadcrumb-item active">Streamlit Copilot (RAG)</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="streamlit-copilot-rag">Streamlit Copilot (RAG)</h1>
+<p>This is the most interactive way to use the project. It runs a local FastAPI server + Streamlit UI.</p>
+<h2 id="what-it-does">What it does</h2>
+<ul>
+<li>Upload a resume PDF and paste a job description (JD)</li>
+<li>Index both into a local vector store (Chroma)</li>
+<li>Ask questions (RAG) and run copilot-style actions:</li>
+<li>score</li>
+<li>rewrite (apply suggested changes and rescore)</li>
+<li>export LaTeX / PDF</li>
+</ul>
+<h2 id="prerequisites">Prerequisites</h2>
+<h3 id="1-install-optional-dependencies">1) Install optional dependencies</h3>
+<pre><code class="language-bash">uv pip install -r requirements_rag.txt
+</code></pre>
+<h3 id="2-start-ollama-pull-models">2) Start Ollama + pull models</h3>
+<p>This project uses Ollama for embeddings and generation.</p>
+<pre><code class="language-bash">ollama serve
+
+# recommended defaults used by the server/UI
+ollama pull nomic-embed-text
+ollama pull llama3
+ollama pull mistral:instruct
+ollama pull llama2:13b
+</code></pre>
+<p>You can change models with env vars:</p>
+<ul>
+<li><code>OLLAMA_EMBED_MODEL</code> (default: <code>nomic-embed-text</code>)</li>
+<li><code>OLLAMA_LLM_MODEL</code> (default: <code>llama3</code>)</li>
+</ul>
+<h2 id="run">Run</h2>
+<h3 id="1-start-the-backend">1) Start the backend</h3>
+<pre><code class="language-bash">uv run uvicorn tools.rag_resume_server:app --reload --port 8100
+</code></pre>
+<h3 id="2-start-the-streamlit-ui">2) Start the Streamlit UI</h3>
+<pre><code class="language-bash">uv run streamlit run tools/rag_resume_app.py --server.port 8502
+</code></pre>
+<p>Open the UI at <code>http://127.0.0.1:8502</code>.</p>
+<h2 id="typical-flow-in-the-ui">Typical flow in the UI</h2>
+<p>1) <strong>Ingest</strong>
+- Upload resume PDF
+- Paste JD text
+- Click <strong>Ingest resume + JD</strong></p>
+<p>The backend will create/dedupe DB rows in <code>marnow.db</code> and return <code>resume_id</code> and <code>job_id</code> automatically.</p>
+<p>2) <strong>Check score</strong>
+- Click <strong>Check score</strong> to see the baseline heuristic score and missing skills.</p>
+<p>3) <strong>Apply suggested changes</strong>
+- Click <strong>Apply suggested changes</strong> to generate a rewritten version and rescore.
+- A new <code>resume_id</code> is created for the rewritten resume.</p>
+<p>4) <strong>Download</strong>
+- Download <code>.tex</code> or <code>.pdf</code> (PDF requires <code>pdflatex</code>).</p>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Vector store directory is controlled by <code>RAG_RESUME_CHROMA_DIR</code> (default <code>./rag_resume_chroma</code>).</li>
+<li>SQLite DB path is controlled by <code>MARNOW_DB</code> (default <code>./marnow.db</code>).</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../cli/" class="btn btn-neutral float-left" title="CLI (DB/Ingest/Match)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../setup/" class="btn btn-neutral float-right" title="Setup Notes">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../cli/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../setup/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
