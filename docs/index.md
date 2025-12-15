@@ -1,13 +1,14 @@
 # Resume-AI-Agent
 
-This project is a small end-to-end pipeline for:
+This repo is a student-style project that combines:
 
-- scraping job postings from company career pages
-- fetching the full job descriptions (JDs)
-- ingesting resumes + JDs into a local SQLite DB
-- scoring a resume <-> JD pair and reporting gaps
+- job scraping + job description fetching
+- a local SQLite DB for JDs/resumes
+- a transparent baseline matcher (score + gaps)
+- an interactive Streamlit RAG "copilot" for analysis and rewrites
 
 Start here:
 
-- `Getting Started` for clone + install
-- `Usage` for the pipeline and CLI commands
+- `Project Report` (high-level summary + what to demo)
+- `Getting Started` (clone + install)
+- `Streamlit Copilot (RAG)` (recommended interactive demo)

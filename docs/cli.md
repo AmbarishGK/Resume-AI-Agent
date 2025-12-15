@@ -24,6 +24,18 @@ python -m marnow.cli ingest-jd app/data/jds/company-role.txt
 python -m marnow.cli ingest-resume app/data/resumes/resume.pdf
 ```
 
+## Find IDs (recommended)
+
+If you are matching from the DB, you’ll need `resume_id` and `job_id`.
+
+```bash
+python tools/db_cli.py list-resumes --limit 10
+python tools/db_cli.py list-jobs --limit 10
+
+# optional filter
+python tools/db_cli.py list-jobs --contains "stripe" --limit 20
+```
+
 ## Match + report
 
 ```bash

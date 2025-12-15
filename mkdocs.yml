@@ -10,12 +10,12 @@ site_dir: site
 
 nav:
   - Home: index.md
+  - Project Report: project-report.md
   - Getting Started: getting-started.md
   - Usage:
       - Pipeline (Workflow): workflow.md
-      - CLI (Ingest/Match): cli.md
+      - CLI (DB/Ingest/Match): cli.md
+      - Streamlit Copilot (RAG): streamlit-copilot.md
   - Reference:
       - Setup Notes: setup.md
       - Troubleshooting: troubleshooting.md
-      - Flow Summary (archived): flow-summary.md
-      - Flow Notes (archived): flow-notes.md

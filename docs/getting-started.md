@@ -9,6 +9,8 @@ cd Resume-AI-Agent
 
 ## 2) Create a virtual environment + install dependencies
 
+Assumptions: Linux, Python 3.10+.
+
 This repo uses `uv` (recommended), but regular `venv` works too.
 
 ### Option A: uv (recommended)
@@ -69,9 +71,12 @@ python -m marnow.cli match <resume_id> <job_id>
 python -m marnow.cli report <match_id>
 ```
 
+## Optional: run the Streamlit copilot
+
+See `streamlit-copilot.md` for the full setup (requires Ollama + `requirements_rag.txt`).
+
 ## Optional: build the docs site
 
 ```bash
-pip install mkdocs
 mkdocs serve
 ```
