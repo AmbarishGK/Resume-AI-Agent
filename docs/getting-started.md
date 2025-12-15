@@ -1,0 +1,59 @@
+# Getting Started
+
+## 1) Clone
+
+```bash
+git clone <YOUR_REPO_URL>
+cd Resume-AI-Agent
+```
+
+## 2) Create a virtual environment + install dependencies
+
+This repo uses `uv` (recommended), but regular `venv` works too.
+
+### Option A: uv (recommended)
+
+```bash
+uv venv
+source .venv/bin/activate
+uv pip install -r requirements.txt
+python -m playwright install chromium
+```
+
+### Option B: standard venv
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python -m playwright install chromium
+```
+
+## 3) Run the pipeline
+
+```bash
+python tools/workflow.py
+```
+
+Outputs:
+
+- scraped listings: `app/data/jobs/jobs.csv`
+- fetched JDs: `app/data/jds/*.txt`
+- SQLite DB: `marnow.db`
+
+## 4) Ingest a resume + run a match
+
+```bash
+python -m marnow.cli ingest-resume app/data/resumes/resume.pdf
+
+# pick a job_id from the DB, then:
+python -m marnow.cli match <resume_id> <job_id>
+python -m marnow.cli report <match_id>
+```
+
+## Optional: build the docs site
+
+```bash
+pip install mkdocs
+mkdocs serve
+```

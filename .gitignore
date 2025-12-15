@@ -37,6 +37,12 @@ debug/
 *.pdf
 !app/data/resumes/*.pdf
 
+# Generated local vector store
+rag_resume_chroma/
+
+# MkDocs output
+site/
+
 # Ollama models (if downloaded)
 mistral*/
 phi3*/

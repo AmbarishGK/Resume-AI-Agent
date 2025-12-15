@@ -1,0 +1,21 @@
+site_name: Resume-AI-Agent
+site_description: Job scraping + JD fetching + resume/JD matching (MaRNoW)
+site_url: https://ambarishgk.github.io/Resume-AI-Agent/
+
+theme:
+  name: readthedocs
+
+docs_dir: docs
+site_dir: site
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Usage:
+      - Pipeline (Workflow): workflow.md
+      - CLI (Ingest/Match): cli.md
+  - Reference:
+      - Setup Notes: setup.md
+      - Troubleshooting: troubleshooting.md
+      - Flow Summary (archived): flow-summary.md
+      - Flow Notes (archived): flow-notes.md

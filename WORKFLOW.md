@@ -1,17 +1,19 @@
-# Resume-AI-Agent Workflow
+# Workflow
 
-This project combines job scraping with resume matching using the MaRNoW system.
+This doc focuses on the pipeline (scrape -> fetch JDs -> ingest).
 
-## Quick Start
-
-### 1. Install Dependencies
+## Quick start
 
 ```bash
-pip install -r requirements.txt
-playwright install chromium
+uv venv
+source .venv/bin/activate
+uv pip install -r requirements.txt
+python -m playwright install chromium
+
+python tools/workflow.py
 ```
 
-### 2. Run the Complete Workflow
+## Run the complete workflow
 
 The automated workflow script handles the entire pipeline:
 
@@ -29,7 +31,7 @@ python tools/workflow.py --include "software,engineer" --exclude "senior,staff" 
 python tools/workflow.py --skip-scrape --skip-fetch  # Only ingest existing JDs
 ```
 
-### 3. Manual Steps (if needed)
+## Manual steps (if needed)
 
 #### Scrape Jobs
 ```bash
